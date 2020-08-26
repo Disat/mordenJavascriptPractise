@@ -99,3 +99,42 @@ let user = makeUser();
 
 alert( user.ref().name ); // John
 // 现在正常了，因为 user.ref() 是一个方法。this 的值为点符号 . 前的这个对象。
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// 比较以下两段代码
+let calculator = {
+  sum() {
+    return a + b;
+  },
+
+  mul() {
+    return a * b;
+  },
+
+  read() {
+    a = +prompt('a?', 0);
+    b = +prompt('b?', 0);
+  }
+};
+
+calculator.read();
+alert( calculator.sum() );
+alert( calculator.mul() );
+// 、、、、、、、、、、、、、
+let calculator = {
+  sum() {
+    return this.a + this.b;
+  },
+
+  mul() {
+    return this.a * this.b;
+  },
+
+  read() {
+    this.a = +prompt('a?', 0);
+    this.b = +prompt('b?', 0);
+  }
+};
+
+calculator.read();
+alert( calculator.sum() );
+alert( calculator.mul() );
