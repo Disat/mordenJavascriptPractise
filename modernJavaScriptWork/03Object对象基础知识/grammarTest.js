@@ -79,12 +79,29 @@
 // console.log(exports);
 // console.log(this);
 // console.log();
-let user = {name: "John"};
+// let user = {name: "John"};
 
-let s = String.toString(user);
+// let s = String.toString(user);
 
-let a = user.valueOf()
-console.log(user);
+// let a = user.valueOf()
+// console.log(user);
+
+function getMaxSubSum(arr) {
+    let maxSum = 0; // 如果没有取到任何元素，就返回 0
+  
+    for (let i = 0; i < arr.length; i++) {
+      let sumFixedStart = 0;
+      for (let j = i; j < arr.length; j++) {
+        sumFixedStart += arr[j];
+        maxSum = Math.max(maxSum, sumFixedStart);
+      }
+    }
+  
+    return maxSum;
+  }
+  
+console.log(getMaxSubSum([100, -9, 2, -3, 5]));
+console.log('a');
 
 
 
