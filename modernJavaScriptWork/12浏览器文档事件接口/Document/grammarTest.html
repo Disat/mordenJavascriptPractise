@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <a name="list">the list</a>
+    <ul>
+        <li><a href="http://google.com">http://google.com</a></li>
+        <li><a href="/tutorial">/tutorial.html</a></li>
+        <li><a href="local/path">local/path</a></li>
+        <li><a href="ftp://ftp.com/my.zip">ftp://ftp.com/my.zip</a></li>
+        <li><a href="http://nodejs.org">http://nodejs.org</a></li>
+        <li><a href="http://internal.com/test">http://internal.com/test</a></li>
+    </ul>
+
+    <script>
+        links = document.querySelectorAll('a')
+
+        for (const link of links) {
+            let href = link.getAttribute('href');
+
+            alert(href)
+
+            // if (!href) continue; // 没有特性
+            // if (!href.includes('://')) continue; // 没有协议
+            // if (href.startsWith('http://internal.com')) continue; // 内部的
+
+            // link.style.color = 'orange';
+        }
+    </script> -->
+
+    <!-- <div id="div"></div>
+    <script>
+        div.before('<p>Hello</p>', document.createElement('hr'));
+        // alert(div)
+    </script> -->
+
+    <!-- <style>
+        .alert {
+            padding: 15px;
+            border: 1px solid #d6e9c6;
+            border-radius: 4px;
+            color: #3c763d;
+            background-color: #dff0d8;
+        }
+    </style>
+
+    <script>
+        document.body.insertAdjacentHTML("afterbegin", `<div class="alert">
+            <strong>Hi there!</strong> You've read an important message.
+          </div>`);
+    </script> -->
+
+    <!-- <div id="first">First</div>
+    <div id="second">Second</div> -->
+    <!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- <style>
+        .alert {
+            padding: 15px;
+            border: 1px solid #d6e9c6;
+            border-radius: 4px;
+            color: #3c763d;
+            background-color: #dff0d8;
+        }
+    </style>
+
+    <div class="alert" id="div">
+        <strong>Hi there!</strong> You've read an important message.
+    </div>
+
+    <script>
+        let div2 = div.cloneNode(true); // 克隆消息
+        div2.querySelector('strong').innerHTML = 'Bye there!'; // 修改克隆
+
+        // div.after(div2); // 在已有的 div 后显示克隆
+        div.after(div2); // 在已有的 div 后显示克隆
+        div.after(div2); // 在已有的 div 后显示克隆
+        div.after(div2); // 在已有的 div 后显示克隆
+        div.after(div2); // 在已有的 div 后显示克隆
+        // div.after(div2);
+    </script> -->
+    <!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- <div id="elem1"></div>
+<div id="elem2"></div>
+<div id="elem3"></div>
+<script>
+  let text = '<b>text</b>';
+
+  elem1.append(document.createTextNode(text));
+  elem2.innerHTML = text;
+  elem3.textContent = text;
+</script> -->
+    <!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- <ol id="elem">
+        <li>Hello</li>
+        <li>World</li>
+    </ol>
+
+    <script>
+        function clear(elem) {
+            // console.log(elem.childNodes.length);
+
+            for (let i = 0; i < elem.childNodes.length; i++) {
+            //     // console.log(i);
+
+                elem.childNodes[1].remove();
+            //     // // alert(elem.childNodes[i])
+            //     // console.log(elem.childNodes[i]);
+            //     // // console.log(elem.childNodes[1]);
+
+
+
+
+            //     while (elem.firstChild) {
+            //         elem.firstChild.remove();
+                }
+
+            // }
+            // console.log(elem.childNodes);
+
+               console.log(elem.innerHTML);
+                
+        }
+        clear(elem); // 清除列表
+    </script> -->
+    <!-- 
+    <script>
+        let ul = document.createElement('ul');
+        document.body.append(ul);
+
+        while(true){
+            let data = prompt("Enter text please","")
+
+            if(!data){
+                break;
+            }
+
+            let li = document.createElement('li');
+            li.textContent = data;
+            ul.append(li);
+        } -->
+    <!-- // }
+
+        // let ul = document.createElement('ul');
+        // document.body.append(ul);
+
+        // while (true) {
+        //     let data = prompt("Enter the text for the list item", "");
+
+        //     if (!data) {
+        //         break;
+        //     }
+
+        //     let li = document.createElement('li');
+        //     li.textContent = data;
+        //     ul.append(li);
+        // } -->
+    <!-- `<ul>
+        <li></li>
+        <li></li>
+    </ul>
+    <ul>
+        <li>
+            <ul>
+                <li></li>
+                <li></li>
+            </ul>
+        </li>
+    </ul>
+    <ul>
+        <li></li>
+        <li></li>
+    </ul>` -->
+    <!-- <div id="container"></div>
+    <script>
+        let data = {
+            "Fish": {
+                "trout": {},
+                "salmon": {}
+            },
+
+            "Tree": {
+                "Huge": {
+                    "sequoia": {},
+                    "oak": {}
+                },
+                "Flowering": {
+                    "apple tree": {},
+                    "magnolia": {}
+                }
+            }
+        };
+
+        let catainer = document.getElementById('container');
+        createTree(container, data);
+
+        function createTree(container, data) {
+            container.innerHTML = `
+        <ul>
+            <li>${data.Fish.trout}</li>
+            <li>${data.Fish.salmon}</li>
+        </ul>
+        <ul>
+            <li>
+                <ul>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </li>
+        </ul>
+        <ul>
+            <li></li>
+            <li></li>
+        </ul>`
+        }
+
+    </script> -->
+
+    <!-- <script src="./grammarTest.js"></script> -->
+    <div id="container"></div>
+
+    <script>
+        let data = {
+            "Fish": {
+                "trout": {},
+                "salmon": {}
+            },
+
+            "Tree": {
+                "Huge": {
+                    "sequoia": {},
+                    "oak": {}
+                },
+                "Flowering": {
+                    "apple tree": {},
+                    "magnolia": {}
+                }
+            }
+        };
+
+        function createTree(container, obj) {
+            container.innerHTML = createTreeText(obj);
+        }
+
+        function createTreeText(obj) { // standalone recursive function
+            let li = '';
+            let ul;
+            for (let key in obj) {
+                li += '<li>' + key + createTreeText(obj[key]) + '</li>';
+            }
+            if (li) {
+                ul = '<ul>' + li + '</ul>'
+            }
+            return ul || '';
+        }
+
+        createTree(container, data);
+    </script>
+</body>
+
+</html>
